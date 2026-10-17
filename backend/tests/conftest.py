@@ -21,7 +21,8 @@ def _pg_url() -> str:
 
 @pytest.fixture(scope="session", autouse=True)
 def _database():
-    url = _pg_url()
+    # CI provides DATABASE_URL (postgres service); local dev spins an embedded one.
+    url = os.environ.get("DATABASE_URL") or _pg_url()
     os.environ["DATABASE_URL"] = url
     from app import db
 
