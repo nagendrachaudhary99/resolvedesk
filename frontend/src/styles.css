@@ -1,0 +1,34 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #e6edf3; }
+header { display: flex; align-items: center; gap: 18px; padding: 14px 24px; border-bottom: 1px solid #21262d; background: #161b22; }
+header h1 { font-size: 18px; margin: 0; }
+header .dot { width: 9px; height: 9px; border-radius: 50%; background: #3fb950; display: inline-block; margin-right: 6px; }
+nav { display: flex; gap: 6px; }
+nav button { background: none; border: 1px solid transparent; color: #9da7b3; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+nav button.active { color: #e6edf3; background: #21262d; }
+nav .badge { background: #da3633; color: #fff; border-radius: 10px; font-size: 11px; padding: 1px 7px; margin-left: 6px; }
+main { padding: 20px 24px; max-width: 1100px; margin: 0 auto; }
+.card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 16px; margin-bottom: 12px; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.muted { color: #8b949e; font-size: 13px; }
+.pill { font-size: 11px; padding: 2px 10px; border-radius: 10px; font-weight: 600; white-space: nowrap; }
+.pill.auto_resolved, .pill.resolved { background: #1a3a24; color: #3fb950; }
+.pill.pending_approval { background: #3d2e0a; color: #d29922; }
+.pill.needs_review, .pill.failed { background: #3d1414; color: #f85149; }
+.pill.new { background: #1c2a3d; color: #58a6ff; }
+button.act { border: none; border-radius: 6px; padding: 7px 16px; cursor: pointer; font-weight: 600; font-size: 13px; }
+button.approve { background: #238636; color: #fff; }
+button.reject { background: #da3633; color: #fff; margin-left: 8px; }
+.draft { white-space: pre-wrap; background: #0d1117; border: 1px solid #21262d; border-radius: 6px; padding: 12px; font-size: 13.5px; line-height: 1.55; margin-top: 10px; }
+.cite { border-left: 3px solid #58a6ff; padding: 8px 12px; margin: 8px 0; background: #101823; font-size: 13px; }
+.cite .src { color: #58a6ff; font-size: 12px; font-weight: 600; }
+.timeline { border-left: 2px solid #21262d; margin-left: 6px; padding-left: 18px; }
+.timeline .ev { margin-bottom: 14px; position: relative; }
+.timeline .ev::before { content: ''; position: absolute; left: -24px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #58a6ff; }
+.timeline .ev.human::before { background: #d29922; }
+.timeline .ev.agent::before { background: #3fb950; }
+.clickable { cursor: pointer; }
+.clickable:hover { border-color: #58a6ff; }
+h3 { margin: 0 0 4px 0; font-size: 15px; }
+.amount { color: #d29922; font-weight: 700; }
